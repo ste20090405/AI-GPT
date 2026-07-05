@@ -20,28 +20,41 @@ visibility: System Only
 ## 世界旗標
 
 ```text
-World_Initialized = False
-First_Chapter_Started = False
-Current_Time_Set = False
-Player_Initialized = False
+世界已初始化：是
+第一章已開始：是
+目前時間已設定：是
+玩家已初始化：是
+目前時間：隋・大業七年（西元611年）初春・翌日清晨
+目前地點：山間倖存者聚落／瞭望臺下
 ```
 
 ## 劇情旗標
 
 ```text
-Meet_Key_NPC = False
-Join_Faction = False
-First_Combat_Triggered = False
+墨羽已離開初始村莊：是
+已認識陳伯：是
+已抵達山間倖存者聚落：是
+已救助小芸：是
+小芸已說出姓名：是
+已認識阿石與阿豆：是
+已完成汲水工作：是
+已分送飲水：是
+已聽聞東方信使公開消息：是
+三名孩童初步建立夥伴關係：是
+挑藥簍老者接近聚落：待處理
+已加入正式勢力：否
+首次戰鬥：否
+隱藏選項⑤：未解鎖
 ```
 
 ## 系統旗標
 
 ```text
-Auto_Record_StoryLog = True
-Auto_Record_Journal = True
-Auto_Record_QuestLog = True
-Auto_Record_CharacterMemory = True
-Auto_Record_WorldFlags = True
+自動更新 StoryLog：是
+自動更新 Journal：是
+自動更新 QuestLog：是
+自動更新 CharacterMemory：是
+自動更新 WorldFlags：是
 ```
 
 ---
