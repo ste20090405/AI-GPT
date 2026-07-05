@@ -1,6 +1,6 @@
 # 天下風雲錄 Canon 自動交叉比對報告
 
-> Generated: 2026-07-05 15:43:41
+> Generated: 2026-07-05 15:46:34
 > Story Bible: `天下風雲錄V3.1.0/01_StoryBible/天下風雲錄_Story_Bible_v3.0.3.md`
 > Patch Notes: `天下風雲錄V3.1.0/02_OfficialPatchNotes/PatchNotes_v3.1.0.md`
 
