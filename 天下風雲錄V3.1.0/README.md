@@ -4,6 +4,24 @@
 
 ---
 
+# Quick Start
+
+```text
+新對話
+    ↓
+@GitHub Auto Load
+    ↓
+Continue / New Game
+    ↓
+開始遊戲
+    ↓
+AUTO_SAVE
+```
+
+更多操作請參閱 `07_Documents/SOP/`。
+
+---
+
 # Repository Purpose
 
 本 Repository 為《天下風雲錄》唯一正式 Canon Repository。
@@ -41,6 +59,7 @@ Repository 不負責創造 Canon，所有 Canon 皆源自 Story Bible。
 07_Templates/
 08_Tools/
 09_Archive/
+CHANGELOG.md
 ```
 
 ---
@@ -49,10 +68,21 @@ Repository 不負責創造 Canon，所有 Canon 皆源自 Story Bible。
 
 `00_Index/` contains the repository boot modules.
 
-- `AUTO_LOAD.mod` — initializes the repository, loads Canon, Runtime and required databases, and resumes the latest session when applicable.
-- `AUTO_SAVE.mod` — automatically saves Runtime state, world state, character state and session progress during execution.
+- `AUTO_LOAD.md` — initializes the repository, loads Canon, Runtime and required databases, and resumes the latest session when applicable.
+- `AUTO_SAVE.md` — saves Runtime state, world state, character state and session progress.
 
-These automation modules standardize repository initialization and runtime persistence.
+---
+
+# SOP
+
+```text
+07_Documents/SOP/
+├── SOP_INDEX.md
+├── 快速開始.md
+├── 玩家操作手冊.md
+├── AI操作手冊.md
+└── Repository維護手冊.md
+```
 
 ---
 
@@ -72,6 +102,14 @@ Story Bible 永遠具有最高 Canon。
 - Canon Consistent
 - UTF-8 Encoding
 - zh-TW Markdown
+
+---
+
+# Documentation
+
+- README.md
+- CHANGELOG.md
+- 07_Documents/SOP/
 
 ---
 
