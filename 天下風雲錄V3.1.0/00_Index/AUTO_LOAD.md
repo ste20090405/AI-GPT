@@ -24,6 +24,8 @@ Based On: `00_Index/LOAD_ORDER.md`
 5. Runtime files 可於遊戲中更新。
 6. 未列於 Boot Order 的角色、地圖、武學、朝廷、詞彙、封存、事件、勢力等資料，必須使用 Lazy Loading。
 7. 若 Runtime 檔案缺失，只能建立缺失的 Runtime 空模板，不得修改 Canon 或 Database。
+8. 若 Runtime 已指向現行章節，必須以 Runtime 為準定位章節，再 Lazy Load 對應封存章節內容作為比對與續寫參考。
+9. 封存章節內容不得覆寫 Runtime；僅可用於確認既有章節敘事、避免前後矛盾、補足續寫上下文。
 
 ---
 
@@ -96,6 +98,56 @@ README.md
 3. Runtime 完整後繼續 Boot。
 ```
 
+### PHASE 4.6 — Active Chapter Archive Sync
+
+本階段屬於 Continue Mode 的 Lazy Loading 檢查，不屬於固定 Boot Order；只有 Runtime 已有有效目前章節時才執行。
+
+```text
+Archive root:
+09_Archive/StoryArchives/SAVE_01/
+
+Reference scope:
+第一卷各章節內容
+
+Active save:
+02_Runtime/Save_001/
+```
+
+執行規則：
+
+```text
+1. Read 02_Runtime/Save_001/SystemState.md.
+2. Extract Current chapter and Current scene.
+3. Read 02_Runtime/Save_001/StoryLog.md.
+4. Confirm the latest StoryLog chapter matches SystemState chapter.
+5. Lazy Load only the matching archive chapter under 09_Archive/StoryArchives/SAVE_01/第一卷各章節內容.
+6. Compare archive chapter content with Runtime current chapter state.
+7. If Runtime and archive conflict, Runtime current state has priority for live continuation.
+8. Use archive content only to preserve chapter continuity, tone, known facts, and unresolved hooks.
+9. Do not preload unrelated archive chapters unless explicitly requested.
+```
+
+目前 Save_001 章節定位：
+
+```text
+Current Chapter: 第七章　新的早晨（上）
+Current Scene: 翌日清晨，墨羽帶阿石與小芸熟悉山間倖存者聚落，瞭望臺發現一名挑著藥簍的老者接近聚落。
+Current World Time: 隋・大業七年（西元611年）初春・翌日清晨
+Current Location: 山間倖存者聚落／瞭望臺下
+Last Player Choice: ③ 早餐後邀請阿石與小芸一起熟悉聚落環境。
+Next Prompt: 是否迎接、觀察或通知沈嬸關於挑藥簍老者抵達。
+```
+
+第七章續寫時必須保留：
+
+```text
+1. 墨羽、阿石、小芸三名孩童已初步形成夥伴關係。
+2. 目前公開事件為瞭望臺發現挑著藥簍的老者接近聚落。
+3. 不得提前揭露老者真實身分、目的或隱藏情報，除非 Runtime 或已載入封存章節明確公開。
+4. 下一步互動應圍繞迎接、觀察、通報沈嬸，或玩家自由行動展開。
+5. 延續第一人稱／墨羽視角與沉浸式互動小說格式。
+```
+
 ### PHASE 5 — Character System
 
 ```text
@@ -154,7 +206,8 @@ AUTO_LOAD_START
    - WorldFlags
 11. Initialize current world time.
 12. Initialize player character MC-001 墨羽.
-13. Begin or continue active chapter.
+13. If Continue Mode, execute PHASE 4.6 Active Chapter Archive Sync.
+14. Begin or continue active chapter.
 
 AUTO_LOAD_END
 ```
@@ -189,6 +242,17 @@ Timeline
 QuestLog
 CharacterMemory
 WorldFlags
+```
+
+Continue Mode 額外檢查：
+
+```text
+1. SystemState.Chapter 必須作為目前章節主來源。
+2. StoryLog 最新一筆章節必須與 SystemState.Chapter 比對。
+3. Journal 最新札記可用於確認墨羽主觀認知與語氣。
+4. 若三者一致，依 SystemState.Next Prompt 繼續。
+5. 若 StoryLog 或 Journal 落後，仍以 SystemState 為準，但不得創造未記錄的過往事件。
+6. 若需要比對封存章節，僅 Lazy Load 目前章節對應內容。
 ```
 
 ---
@@ -245,6 +309,16 @@ Load only required file or section
 Return to current Runtime context
 ```
 
+Archive Lazy Loading 補充規則：
+
+```text
+1. Archives 不得作為固定 Boot 檔案。
+2. Continue Mode 可依目前章節載入單一對應封存章節。
+3. Save_001 第一卷章節封存來源為 09_Archive/StoryArchives/SAVE_01/第一卷各章節內容。
+4. 封存內容只作比對、校準與續寫參考，不得覆蓋 Runtime。
+5. 若使用者明確要求回顧或比對其他章節，才可載入非當前章節。
+```
+
 ---
 
 ## Canon Priority During Auto Load
@@ -257,6 +331,7 @@ Return to current Runtime context
 5. Game Systems
 6. Project Rules and Standards
 7. Runtime Save State
+8. Lazy Loaded Current Chapter Archive Reference
 ```
 
 ---
@@ -276,7 +351,9 @@ Return to current Runtime context
 2. 讀取 LOAD_ORDER.md。
 3. 依 LOAD_ORDER.md 執行完整載入。
 4. 驗證 Runtime。
-5. 回報 New Game 或 Continue 狀態。
+5. 判斷 New Game 或 Continue 狀態。
+6. 若為 Continue，依目前章節 Lazy Load 對應封存章節內容。
+7. 比對 Runtime 與封存章節後回報續寫起點。
 ```
 
 ---
