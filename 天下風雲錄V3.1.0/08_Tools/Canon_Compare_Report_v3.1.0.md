@@ -1,6 +1,6 @@
 # 天下風雲錄 Canon 自動交叉比對報告
 
-> Generated: 2026-07-05 15:22:44
+> Generated: 2026-07-05 15:43:41
 > Story Bible: `天下風雲錄V3.1.0/01_StoryBible/天下風雲錄_Story_Bible_v3.0.3.md`
 > Patch Notes: `天下風雲錄V3.1.0/02_OfficialPatchNotes/PatchNotes_v3.1.0.md`
 
@@ -9,9 +9,9 @@
 # 一、文件統計
 
 - Story Bible 行數：25074
-- Patch Notes 行數：619
+- Patch Notes 行數：679
 - Story Bible 標題段落數：1233
-- Patch Notes 標題段落數：70
+- Patch Notes 標題段落數：71
 
 ---
 
@@ -77,6 +77,7 @@
 - CD-002-11
 - CD-002-12
 - Canon Level
+- Canonical Impact
 - Changed
 - Changed Chapter Length Policy.
 - Changed Dynamic Information Maintenance.
@@ -96,10 +97,14 @@
 - Gameplay Core
 - Gameplay Flow
 - Gameplay Interaction
+- Gameplay Proposal Summary
+- Gameplay Rules Update
 - Gameplay Rules v3.1.0
 - MC-001
 - Official Character File
+- Official Patch Notes v3.0.3
 - Official Version Record
+- Reference Summary
 - Runtime GameData
 - SUMMARY-20260705-001
 - SUMMARY-20260705-002
@@ -138,12 +143,19 @@
 - 並正式發布
 - 中以下提案
 - 中已採納提案正式整合而來
+- 中與本次版本更新直接相關
 - 中顯示與墨羽人格
+- 之正式內容
 - 之規則
 - 亂世浮萍
 - 互動選項人格
 - 互動選項備註欄位可依劇情
 - 互動選項顯示結構調整為
+- 亦不修改
+- 亦不新增世界
+- 亦不新增人物
+- 亦不新增系統
+- 亦不新增資料庫
 - 人格核心
 - 人格核心包括
 - 人物弧線
@@ -157,6 +169,7 @@
 - 以下內容自
 - 低風險
 - 作品核心
+- 作為版本更新參考
 - 來自長時間觀察
 - 依最新正式
 - 修正不得產生墨羽目前不可
@@ -184,6 +197,7 @@
 - 動態管理
 - 動選項
 - 原提案狀態不再適用
+- 參考摘要
 - 可用於特殊劇情
 - 可變項目包括
 - 同步規則
@@ -205,10 +219,15 @@
 - 外觀資料包含
 - 官方史書
 - 已知資訊與未知資訊改為動
+- 已確立之世界相關正式內容
+- 已確立之人物相關正式內容
+- 已確立之系統相關正式內容
+- 已確立之資料欄位規格
 - 平時不顯示
 - 心理資料包含
 - 思想資料包含
 - 態維護
+- 應於後續
 - 或任何正式
 - 戰後善後
 - 戰爭觀
@@ -238,25 +257,6 @@
 - 新增第一世
 - 新增第一人稱沉浸式敘事規
 - 新增管理者模式完整調閱能
-- 新增遊戲模式切換規則
-- 新增隱藏互動選項
-- 時即可建立
-- 更能改善百姓生活
-- 書寫或整理思緒等合理條件
-- 最大遺憾
-- 最大願望
-- 最後判斷
-- 最終答案為
-- 最高精神
-- 朝廷觀
-- 未來事件或隱藏情報
-- 未提及內容皆維持原設定
-- 本作品不採用以下表述作為
-- 本作品最高精神為
-- 本作品核心為
-- 本更新檔承接
-- 本次更新正式採納
-- 本章由
 
 ---
 
