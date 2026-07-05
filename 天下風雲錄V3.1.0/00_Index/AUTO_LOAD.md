@@ -32,8 +32,9 @@ Based On: `00_Index/LOAD_ORDER.md`
 13. 若存在多個符合格式的 Patch Notes，必須依版本號由低至高依序載入，不得跳過任何正式版本。
 14. 既有檔案 `02_OfficialPatchNotes/PatchNotes_v3.0.3.md` 視為 v3.0.3 官方更新檔，必須於 Boot 中載入；後續新檔案應採 `天下風雲錄PatchNotes_vX.X.X.md` 格式。
 15. 最終 Canon = Story Bible Base + Official Patch Notes（依版本號遞增順序套用）。
-16. `07_Staging/Gameplay/天下風雲錄 提案.md` 屬於 Staging Draft，可作為下次更新前的測試補充，但不得視為正式 Canon。
-17. Staging Draft 僅能用於測試 AI 回應、玩法流程、規則驗證與未來更新整合，不得覆寫 Story Bible、Official Patch Notes、Runtime Save 或 Archive。
+16. `07_Staging/Gameplay/` 屬於 Staging Draft 區，可作為下次更新前的測試補充，但不得視為正式 Canon。
+17. Gameplay Staging 目前拆分為三檔：`天下風雲錄 提案.md` 作為入口索引，`天下風雲錄 提案資料.md` 作為原始提案資料，`天下風雲錄 提案彙整.md` 作為彙整與 Patch Notes 候選來源。
+18. Staging Draft 僅能用於測試 AI 回應、玩法流程、規則驗證與未來更新整合，不得覆寫 Story Bible、Official Patch Notes、Runtime Save 或 Archive。
 
 ---
 
@@ -222,47 +223,87 @@ Next Prompt: 是否迎接、觀察或通知沈嬸關於挑藥簍老者抵達。
 07_Documents/Standards/Directory_Structure.md
 ```
 
-### PHASE 8.5 — Temporary Staging Gameplay Extension
+### PHASE 8.5 — Gameplay Staging Proposal System
 
-本階段為暫存補充說明，用於下一次正式更新前的 Gameplay 測試，不屬於固定 Boot Order，也不屬於正式 Canon。
+本階段為暫存補充說明，用於下一次正式更新前的 Gameplay 提案收錄、測試、彙整與 Patch Notes 候選整理。不屬於固定 Boot Order，也不屬於正式 Canon。
 
 ```text
-Staging source:
+Staging root:
+07_Staging/Gameplay/
+
+Index / Routing:
 07_Staging/Gameplay/天下風雲錄 提案.md
 
-Proposal version:
-天下風雲錄 V3.1.1 提案
+Raw Proposal Log:
+07_Staging/Gameplay/天下風雲錄 提案資料.md
+
+Proposal Summary:
+07_Staging/Gameplay/天下風雲錄 提案彙整.md
 
 Status:
 Draft / Experimental / Testing Only
 ```
 
-暫存提案目前包含：
+檔案職責：
 
 ```text
-1. 提案一：隱藏互動選項（⑤）
-   - ①～③：一般劇情選項
-   - ④：自由行動
-   - ⑤（隱藏）：特殊觸發選項
-   - ⑤ 只在符合身分、年齡、能力、聲望、關係、旗標、世界事件、真實歷史事件、地點、時間線或官方資料條件時出現。
+1. 天下風雲錄 提案.md
+   - Gameplay Staging Index
+   - 入口、索引、分流、自動化路由
+   - 不保存主要提案內容
 
-2. 提案二：互動選項（①～③）人格／執念提示
-   - 產生 ①～③ 劇情互動選項時，比對 MC-001 墨羽 Official Character File。
-   - 若符合墨羽真實人格或執念，於「備註」中加入對應提示。
-   - 所有選項仍必須包含固定欄位「風險」與「備註」。
+2. 天下風雲錄 提案資料.md
+   - Raw Proposal Log
+   - 收錄使用者在遊戲中即時提出的原始 Gameplay 提案
+   - 保存使用者原意、場景語境、測試想法與即時回饋
+
+3. 天下風雲錄 提案彙整.md
+   - Proposal Summary
+   - 分類、合併、測試狀態追蹤、採用建議與 Patch Notes Candidate Text
+```
+
+Gameplay Staging 工作流：
+
+```text
+遊戲中提出提案
+        │
+        ▼
+07_Staging/Gameplay/天下風雲錄 提案資料.md
+Raw Proposal Log
+        │
+        ▼
+07_Staging/Gameplay/天下風雲錄 提案彙整.md
+Proposal Summary
+        │
+        ▼
+遊戲中測試 / 修訂 / 接受 / 拒絕
+        │
+        ▼
+Accepted Proposal
+        │
+        ▼
+Patch Notes Candidate Text
+        │
+        ▼
+02_OfficialPatchNotes/天下風雲錄PatchNotes_vX.X.X.md
+正式版本更新後才成為 Canon
 ```
 
 執行規則：
 
 ```text
-1. Staging Gameplay Extension 預設不自動改寫正式規則。
-2. 僅在使用者明確要求測試、或下次版本更新測試需要時，Lazy Load 07_Staging/Gameplay/天下風雲錄 提案.md。
-3. Staging 內容不得覆寫 Story Bible。
-4. Staging 內容不得覆寫 Official Patch Notes。
-5. Staging 內容不得覆寫 Runtime Save。
-6. Staging 內容不得覆寫 Archive。
-7. Staging 內容僅作為 AI 回應、Gameplay 流程、互動選項格式與規則驗證之測試參考。
-8. 若提案正式採用，應轉寫至下一版 Official Patch Notes，例如 `天下風雲錄PatchNotes_v3.1.1.md`，再移除此暫存補充說明。
+1. Staging Gameplay Proposal System 預設不自動改寫正式規則。
+2. 僅在使用者明確要求測試、提案、驗證、彙整或下次版本更新測試需要時，Lazy Load Gameplay Staging files。
+3. 新提案必須優先寫入 `天下風雲錄 提案資料.md`。
+4. 提案修訂、測試結果或狀態變更必須更新同一 Proposal ID。
+5. 若提案影響廣泛規則、互動格式、UI 或版本設計，必須同步更新 `天下風雲錄 提案彙整.md`。
+6. Accepted Proposal 只代表建議採用，不代表 Canon。
+7. Accepted Proposal 必須先形成 Patch Notes Candidate Text。
+8. 只有正式寫入 `02_OfficialPatchNotes/天下風雲錄PatchNotes_vX.X.X.md` 後，才可成為正式 Canon 或 Gameplay Rule。
+9. Staging 內容不得覆寫 Story Bible。
+10. Staging 內容不得覆寫 Official Patch Notes。
+11. Staging 內容不得覆寫 Runtime Save。
+12. Staging 內容不得覆寫 Archive。
 ```
 
 ---
@@ -303,7 +344,7 @@ AUTO_LOAD_START
 19. Initialize player character MC-001 墨羽.
 20. If Continue Mode, execute PHASE 4.6 Active Chapter Archive Sync.
 21. Begin or continue active chapter.
-22. If Staging Gameplay testing is explicitly enabled, execute PHASE 8.5 Temporary Staging Gameplay Extension.
+22. If Staging Gameplay testing or proposal capture is explicitly enabled, execute PHASE 8.5 Gameplay Staging Proposal System.
 23. Mark all Staging-derived behavior as Experimental only.
 
 AUTO_LOAD_END
@@ -431,11 +472,38 @@ Staging Lazy Loading 補充規則：
 
 ```text
 1. Staging files 預設不得於 Boot 時自動載入。
-2. `07_Staging/Gameplay/天下風雲錄 提案.md` 僅作為下次版本更新前的測試補充。
-3. 只有在使用者明確要求測試、驗證或下次更新前預覽時，才可 Lazy Load 此檔案。
-4. Staging 內容必須標示為 Experimental。
-5. Staging 內容不得進入 Final Canon。
-6. Staging 內容若正式採用，必須轉入 Official Patch Notes 後才可成為正式規則。
+2. `07_Staging/Gameplay/天下風雲錄 提案.md` 僅作為 Gameplay Staging Index。
+3. `07_Staging/Gameplay/天下風雲錄 提案資料.md` 僅作為 Raw Proposal Log。
+4. `07_Staging/Gameplay/天下風雲錄 提案彙整.md` 僅作為 Proposal Summary 與 Patch Notes Candidate 來源。
+5. 只有在使用者明確要求提案、測試、驗證、彙整或下次更新前預覽時，才可 Lazy Load Gameplay Staging files。
+6. Staging 內容必須標示為 Experimental。
+7. Staging 內容不得進入 Final Canon。
+8. Staging 內容若正式採用，必須轉入 Official Patch Notes 後才可成為正式規則。
+```
+
+Proposal Capture Automation：
+
+```text
+PROPOSAL_CAPTURE_START
+
+1. Detect user proposal or gameplay test feedback.
+2. If the user introduces a new gameplay idea:
+   - Generate or assign Proposal ID.
+   - Write raw proposal into:
+     07_Staging/Gameplay/天下風雲錄 提案資料.md
+3. If the user revises or tests an existing proposal:
+   - Update the matching Proposal ID in 提案資料.md.
+4. If the proposal affects broader rules, UI, interaction structure, or future version design:
+   - Update or create related summary in:
+     07_Staging/Gameplay/天下風雲錄 提案彙整.md
+5. Preserve original user intent.
+6. Mark all entries as Non-Canon / Staging Only.
+7. If a proposal becomes Accepted:
+   - Prepare Patch Notes Candidate Text in 提案彙整.md.
+   - Do not treat it as Canon.
+8. Report updated file, Proposal ID, and current Status to the user.
+
+PROPOSAL_CAPTURE_END
 ```
 
 ---
@@ -451,7 +519,7 @@ Staging Lazy Loading 補充規則：
 6. Project Rules and Standards
 7. Runtime Save State
 8. Lazy Loaded Current Chapter Archive Reference
-9. Temporary Staging Gameplay Reference, Experimental Only
+9. Temporary Gameplay Staging Reference, Experimental Only
 ```
 
 Canon 合成規則：
@@ -465,6 +533,7 @@ Conflict handling:
 3. Runtime may record lived state, but may not create new Canon.
 4. Archive references may preserve continuity, but may not override Final Canon or Runtime live state.
 5. Staging references are never Canon and cannot override Final Canon, Runtime, or Archive.
+6. Proposal Summary may generate Patch Notes Candidate Text, but it is not Canon until formally written into Official Patch Notes.
 ```
 
 ---
@@ -490,8 +559,10 @@ Conflict handling:
 8. 判斷 New Game 或 Continue 狀態。
 9. 若為 Continue，依目前章節 Lazy Load 對應封存章節內容。
 10. 比對 Runtime、Final Canon 與封存章節後回報續寫起點。
-11. 若使用者明確啟用 Staging Gameplay 測試，載入 07_Staging/Gameplay/天下風雲錄 提案.md。
-12. 回報 Staging 內容為 Experimental，僅供下次更新前測試。
+11. 若使用者明確啟用 Gameplay Staging 測試或 Proposal Capture，讀取 07_Staging/Gameplay/天下風雲錄 提案.md。
+12. 新提案寫入 07_Staging/Gameplay/天下風雲錄 提案資料.md。
+13. 需要彙整、分類、狀態追蹤或 Patch Notes Candidate 時，更新 07_Staging/Gameplay/天下風雲錄 提案彙整.md。
+14. 回報 Staging 內容為 Experimental，僅供下次更新前測試。
 ```
 
 ---
