@@ -1,0 +1,45 @@
+name: Auto Canon Compare
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '天下風雲錄V3.1.0/01_StoryBible/**'
+      - '天下風雲錄V3.1.0/02_OfficialPatchNotes/**'
+      - '天下風雲錄V3.1.0/08_Tools/auto_canon_compare.py'
+      - '.github/workflows/auto-canon-compare.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  canon-compare:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run canon compare
+        run: |
+          python "天下風雲錄V3.1.0/08_Tools/auto_canon_compare.py" \
+            --story "天下風雲錄V3.1.0/01_StoryBible/天下風雲錄_Story_Bible_v3.0.3.md" \
+            --patch "天下風雲錄V3.1.0/02_OfficialPatchNotes/PatchNotes_v3.1.0.md" \
+            --out "天下風雲錄V3.1.0/08_Tools/Canon_Compare_Report_v3.1.0.md"
+
+      - name: Commit report if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "天下風雲錄V3.1.0/08_Tools/Canon_Compare_Report_v3.1.0.md"
+          if git diff --cached --quiet; then
+            echo "No report changes to commit."
+          else
+            git commit -m "Update canon comparison report v3.1.0"
+            git push
+          fi
