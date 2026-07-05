@@ -56,7 +56,36 @@ v3.1.0
 
 ---
 
-# 第一章 Story Bible 正式規格
+# Canon Reference
+
+本文件屬於 Version Canon。
+
+用途：
+
+- 記錄正式版本更新。
+- 引用 Story Bible v3.0.3。
+- 引用 Official Databases。
+- 記錄 Gameplay Rules 更新。
+
+本文件不取代 Story Bible。
+
+本文件不直接修改 Story Bible。
+
+本文件不建立高於 Story Bible 的 Official Canon。
+
+正式 Canon 應於後續 Story Bible 版本整合。
+
+若本文件與 Story Bible 發生衝突，應以 Story Bible 為最高依據。
+
+---
+
+# 第一章 Story Bible 參考摘要（Reference Summary）
+
+本章僅引用 Story Bible v3.0.3 中與本次版本更新直接相關之正式內容，作為 Patch Notes 的 Canon Reference。
+
+本章不構成 Story Bible，亦不修改 Story Bible。
+
+若內容與 Story Bible 發生衝突，應以 Story Bible 為最高依據。
 
 ## 作品核心
 
@@ -125,7 +154,11 @@ v3.1.0
 
 ---
 
-# 第二章 Character Database 正式規格
+# 第二章 Character Database 參考摘要（Reference Summary）
+
+本章僅引用 Character Database 與 Story Bible 已確立之人物相關正式內容，作為版本更新參考。
+
+本章不取代 Character Database，亦不新增人物 Canon。
 
 ## 人格核心
 
@@ -174,7 +207,11 @@ v3.1.0
 
 ---
 
-# 第三章 World Database 正式規格
+# 第三章 World Database 參考摘要（Reference Summary）
+
+本章僅引用 World Database 與 Story Bible 已確立之世界相關正式內容，作為版本更新參考。
+
+本章不取代 World Database，亦不新增世界 Canon。
 
 ## 世界運轉
 
@@ -198,7 +235,11 @@ v3.1.0
 
 ---
 
-# 第四章 Game Systems 正式規格
+# 第四章 Game Systems 參考摘要（Reference Summary）
+
+本章僅引用 Game Systems 與 Story Bible 已確立之系統相關正式內容，作為版本更新參考。
+
+本章不取代 Game Systems，亦不新增系統 Canon。
 
 正式採用：
 
@@ -252,7 +293,11 @@ v3.1.0
 
 ---
 
-# 第五章 Character Database Specification 正式規格
+# 第五章 Character Database Specification 參考摘要（Reference Summary）
+
+本章僅引用 Character Database Specification 已確立之資料欄位規格，作為版本更新參考。
+
+本章不取代 Character Database Specification，亦不新增資料庫 Canon。
 
 ## CD-002-01
 
@@ -603,6 +648,21 @@ Gameplay Runtime 改為即時同步以下區塊：
 - Changed Dynamic Information Maintenance.
 
 ## v3.1.0
+
+Release Type:
+
+Minor Release
+
+Canonical Impact:
+
+Gameplay Rules Update
+
+Reference:
+
+- Story Bible v3.0.3
+- Official Patch Notes v3.0.3
+- Gameplay Proposal Summary：SUMMARY-20260705-001
+- Gameplay Proposal Summary：SUMMARY-20260705-002
 
 ### Gameplay Rules
 
