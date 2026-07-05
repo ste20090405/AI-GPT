@@ -9,7 +9,6 @@
 本 Repository 為《天下風雲錄》唯一正式 Canon Repository。
 
 主要負責保存與維護：
-
 - Story Bible
 - Runtime
 - Official Databases
@@ -21,9 +20,7 @@
 - Development Tools
 - Archives
 
-Repository 不負責創造 Canon。
-
-所有 Canon 皆源自 Story Bible。
+Repository 不負責創造 Canon，所有 Canon 皆源自 Story Bible。
 
 ---
 
@@ -31,7 +28,6 @@ Repository 不負責創造 Canon。
 
 ```text
 天下風雲錄V3.1.0/
-
 00_Index/
 01_StoryBible/
 02_Runtime/
@@ -49,6 +45,17 @@ Repository 不負責創造 Canon。
 
 ---
 
+# Boot Automation
+
+`00_Index/` contains the repository boot modules.
+
+- `AUTO_LOAD.mod` — initializes the repository, loads Canon, Runtime and required databases, and resumes the latest session when applicable.
+- `AUTO_SAVE.mod` — automatically saves Runtime state, world state, character state and session progress during execution.
+
+These automation modules standardize repository initialization and runtime persistence.
+
+---
+
 # Canon Hierarchy
 
 Story Bible → Runtime → Official Databases → Gameplay → Official Patch Notes → Archives
@@ -60,7 +67,6 @@ Story Bible 永遠具有最高 Canon。
 # Repository Principles
 
 所有正式文件必須：
-
 - Traceable
 - Cross Referenced
 - Canon Consistent
