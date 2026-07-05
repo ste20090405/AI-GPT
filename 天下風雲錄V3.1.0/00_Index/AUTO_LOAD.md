@@ -91,19 +91,6 @@ Patch Notes 載入規則：
 9. Final Canon must be resolved before loading Runtime Save.
 ```
 
-版本格式：
-
-```text
-Required future format:
-天下風雲錄PatchNotes_vX.X.X.md
-
-X = numeric version segment
-Example:
-天下風雲錄PatchNotes_v3.0.3.md
-天下風雲錄PatchNotes_v3.1.0.md
-天下風雲錄PatchNotes_v3.1.1.md
-```
-
 ### PHASE 4 — Runtime Save
 
 ```text
@@ -153,7 +140,7 @@ Archive root:
 09_Archive/StoryArchives/SAVE_01/
 
 Reference scope:
-第一卷各章節內容
+SAVE_01 chapter archive root
 
 Active save:
 02_Runtime/Save_001/
@@ -166,7 +153,7 @@ Active save:
 2. Extract Current chapter and Current scene.
 3. Read 02_Runtime/Save_001/StoryLog.md.
 4. Confirm the latest StoryLog chapter matches SystemState chapter.
-5. Lazy Load only the matching archive chapter under 09_Archive/StoryArchives/SAVE_01/第一卷各章節內容.
+5. Lazy Load only the matching archive chapter under 09_Archive/StoryArchives/SAVE_01/.
 6. Compare archive chapter content with Runtime current chapter state.
 7. If Runtime and archive conflict, Runtime current state has priority for live continuation.
 8. Use archive content only to preserve chapter continuity, tone, known facts, and unresolved hooks.
@@ -244,51 +231,6 @@ Status:
 Draft / Experimental / Testing Only
 ```
 
-檔案職責：
-
-```text
-1. 天下風雲錄 提案.md
-   - Gameplay Staging Index
-   - 入口、索引、分流、自動化路由
-   - 不保存主要提案內容
-
-2. 天下風雲錄 提案資料.md
-   - Raw Proposal Log
-   - 收錄使用者在遊戲中即時提出的原始 Gameplay 提案
-   - 保存使用者原意、場景語境、測試想法與即時回饋
-
-3. 天下風雲錄 提案彙整.md
-   - Proposal Summary
-   - 分類、合併、測試狀態追蹤、採用建議與 Patch Notes Candidate Text
-```
-
-Gameplay Staging 工作流：
-
-```text
-遊戲中提出提案
-        │
-        ▼
-07_Staging/Gameplay/天下風雲錄 提案資料.md
-Raw Proposal Log
-        │
-        ▼
-07_Staging/Gameplay/天下風雲錄 提案彙整.md
-Proposal Summary
-        │
-        ▼
-遊戲中測試 / 修訂 / 接受 / 拒絕
-        │
-        ▼
-Accepted Proposal
-        │
-        ▼
-Patch Notes Candidate Text
-        │
-        ▼
-02_OfficialPatchNotes/天下風雲錄PatchNotes_vX.X.X.md
-正式版本更新後才成為 Canon
-```
-
 執行規則：
 
 ```text
@@ -300,10 +242,7 @@ Patch Notes Candidate Text
 6. Accepted Proposal 只代表建議採用，不代表 Canon。
 7. Accepted Proposal 必須先形成 Patch Notes Candidate Text。
 8. 只有正式寫入 `02_OfficialPatchNotes/天下風雲錄PatchNotes_vX.X.X.md` 後，才可成為正式 Canon 或 Gameplay Rule。
-9. Staging 內容不得覆寫 Story Bible。
-10. Staging 內容不得覆寫 Official Patch Notes。
-11. Staging 內容不得覆寫 Runtime Save。
-12. Staging 內容不得覆寫 Archive。
+9. Staging 內容不得覆寫 Story Bible、Official Patch Notes、Runtime Save 或 Archive。
 ```
 
 ---
@@ -331,15 +270,7 @@ AUTO_LOAD_START
 16. Determine boot mode:
    - If Runtime has established current chapter and scene: Continue.
    - If Runtime is empty or uninitialized: New Game.
-17. Restore or initialize:
-   - SystemState
-   - CharacterState
-   - Timeline
-   - StoryLog
-   - Journal
-   - QuestLog
-   - CharacterMemory
-   - WorldFlags
+17. Restore or initialize Runtime files.
 18. Initialize current world time.
 19. Initialize player character MC-001 墨羽.
 20. If Continue Mode, execute PHASE 4.6 Active Chapter Archive Sync.
@@ -454,7 +385,7 @@ Archive Lazy Loading 補充規則：
 ```text
 1. Archives 不得作為固定 Boot 檔案。
 2. Continue Mode 可依目前章節載入單一對應封存章節。
-3. Save_001 第一卷章節封存來源為 09_Archive/StoryArchives/SAVE_01/第一卷各章節內容。
+3. Save_001 章節封存來源為 09_Archive/StoryArchives/SAVE_01/。
 4. 封存內容只作比對、校準與續寫參考，不得覆蓋 Runtime。
 5. 若使用者明確要求回顧或比對其他章節，才可載入非當前章節。
 ```
@@ -479,31 +410,6 @@ Staging Lazy Loading 補充規則：
 6. Staging 內容必須標示為 Experimental。
 7. Staging 內容不得進入 Final Canon。
 8. Staging 內容若正式採用，必須轉入 Official Patch Notes 後才可成為正式規則。
-```
-
-Proposal Capture Automation：
-
-```text
-PROPOSAL_CAPTURE_START
-
-1. Detect user proposal or gameplay test feedback.
-2. If the user introduces a new gameplay idea:
-   - Generate or assign Proposal ID.
-   - Write raw proposal into:
-     07_Staging/Gameplay/天下風雲錄 提案資料.md
-3. If the user revises or tests an existing proposal:
-   - Update the matching Proposal ID in 提案資料.md.
-4. If the proposal affects broader rules, UI, interaction structure, or future version design:
-   - Update or create related summary in:
-     07_Staging/Gameplay/天下風雲錄 提案彙整.md
-5. Preserve original user intent.
-6. Mark all entries as Non-Canon / Staging Only.
-7. If a proposal becomes Accepted:
-   - Prepare Patch Notes Candidate Text in 提案彙整.md.
-   - Do not treat it as Canon.
-8. Report updated file, Proposal ID, and current Status to the user.
-
-PROPOSAL_CAPTURE_END
 ```
 
 ---
