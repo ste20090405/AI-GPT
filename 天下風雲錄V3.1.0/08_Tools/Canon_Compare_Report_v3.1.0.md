@@ -1,0 +1,477 @@
+# 天下風雲錄 Canon 自動交叉比對報告
+
+> Generated: 2026-07-05 15:22:44
+> Story Bible: `天下風雲錄V3.1.0/01_StoryBible/天下風雲錄_Story_Bible_v3.0.3.md`
+> Patch Notes: `天下風雲錄V3.1.0/02_OfficialPatchNotes/PatchNotes_v3.1.0.md`
+
+---
+
+# 一、文件統計
+
+- Story Bible 行數：25074
+- Patch Notes 行數：619
+- Story Bible 標題段落數：1233
+- Patch Notes 標題段落數：70
+
+---
+
+# 二、核心 Canon 關鍵項檢查
+
+## 已反映
+
+- Official Canon
+- Story Bible
+- 世界自行運轉
+- 人格
+- 他人內心
+- 四個基礎互動選項
+- 執念
+- 墨羽知道
+- 墨羽視角
+- 幕後真相
+- 未來事件
+- 核心信念
+- 玩家知道
+- 生而微末者，當真無聲嗎
+- 第一人稱
+- 自由行動
+- 英雄，因天下而誕生
+- 蒼生無言，俠為其聲
+- 隱藏互動選項
+- 隱藏情報
+
+## 需人工確認或可能未反映
+
+- 不得使用上帝視角
+- 不得提前透露
+
+---
+
+# 三、警告項目
+
+- 未偵測到明顯規則衝突。
+
+---
+
+# 四、Patch Notes 可能超出 Story Bible 的詞項
+
+> 以下為自動詞項比對結果，不等於必然衝突；需人工依 Story Bible 判定。
+
+- Added
+- Added Canon Priority Rules.
+- Added Dynamic Information System.
+- Added Gameplay Mode Switching.
+- Added Hidden Interaction Option
+- Added Roleplay Personality / Obsession Hi
+- Added Runtime Synchronization.
+- CD-002-01
+- CD-002-02
+- CD-002-03
+- CD-002-04
+- CD-002-05
+- CD-002-06
+- CD-002-07
+- CD-002-08
+- CD-002-09
+- CD-002-10
+- CD-002-11
+- CD-002-12
+- Canon Level
+- Changed
+- Changed Chapter Length Policy.
+- Changed Dynamic Information Maintenance.
+- Changed Ink Journal System.
+- Changed interaction UI structure to suppo
+- Character Database Specification
+- Character Database v3.0
+- Character Specification
+- Fixed
+- Fixed Gameplay UI Structure.
+- Fixed Interaction Option Rules.
+- Fixed Narrative Perspective Rules.
+- Fixed base interaction option rule to all
+- Game Systems
+- Game Systems v3.0
+- GameData
+- Gameplay Core
+- Gameplay Flow
+- Gameplay Interaction
+- Gameplay Rules v3.1.0
+- MC-001
+- Official Character File
+- Official Version Record
+- Runtime GameData
+- SUMMARY-20260705-001
+- SUMMARY-20260705-002
+- Staging/Gameplay/
+- Staging/Gameplay/Updates/Gameplay_Rules_U
+- Status
+- Story Bible v3.0.3
+- System.
+- Version 3.1.0
+- Version Log
+- World Database v3.0
+- nt System for interaction options.
+- ow four fixed base options plus one condi
+- pdate_v3.0.3.md
+- rt conditional hidden gameplay content.
+- tional hidden option.
+- v3.0.3 Official Patch Notes
+- v3.1.0 Gameplay Rules
+- 一最佳選項
+- 一生追求
+- 不再屬正式章節制度
+- 不再限定夜晚才能新增札記
+- 不可變項目包括
+- 不可違反原則
+- 不得不加入瓦崗軍
+- 不得成為固定優勢選項或唯
+- 不得提前劇透
+- 不得提前完整揭示
+- 不得違反
+- 不變的是
+- 世界中必須大量呈現煙火氣
+- 世界自行運轉
+- 世界資料與
+- 世界運轉
+- 並允許在條件成立時額外顯
+- 並正式發布
+- 中以下提案
+- 中已採納提案正式整合而來
+- 中顯示與墨羽人格
+- 之規則
+- 亂世浮萍
+- 互動選項人格
+- 互動選項備註欄位可依劇情
+- 互動選項顯示結構調整為
+- 人格核心
+- 人格核心包括
+- 人物弧線
+- 人物弧線為
+- 人物核心資料包含
+- 人物演變結構為
+- 人物鐵律
+- 人物關係改為依劇情重要性
+- 人生資料包含
+- 仍固定為
+- 以下內容自
+- 低風險
+- 作品核心
+- 來自長時間觀察
+- 依最新正式
+- 修正不得產生墨羽目前不可
+- 修正不得透露墨羽未知資訊
+- 修正世界局勢更新條件
+- 修正人物關係同步規則
+- 修正全程採墨羽第一人稱視
+- 修正勢力資訊顯示條件
+- 修正所有劇情資訊必須符合
+- 修正每個選項皆須標示風險
+- 修正每回合固定提供四個互
+- 修正禁止上帝視角敘事
+- 修正章末資訊更新方式
+- 修正第四項固定為
+- 修正角色扮演提示不得被視
+- 修正隱藏互動不得削弱
+- 僅於符合特定條件時顯示
+- 優先序
+- 六百年人生中
+- 則完成
+- 前往茶館
+- 副作用
+- 劇情定位
+- 加入原因
+- 動態管理
+- 動選項
+- 原提案狀態不再適用
+- 可用於特殊劇情
+- 可變項目包括
+- 同步規則
+- 四個基礎互動選項
+- 四個基礎選項
+- 執念或核心信念相符的角色
+- 執念提示
+- 執念提示不代表最佳選項
+- 執念提示不得取代風險與影
+- 執念提示不得透露墨羽未知
+- 執念提示不得限制玩家自由
+- 執念提示僅作為角色扮演參
+- 執念提示必須符合
+- 墨羽因戰亂失去生計
+- 墨羽接受延攬的原因
+- 墨羽知道
+- 墨羽視角
+- 外在人格
+- 外觀資料包含
+- 官方史書
+- 已知資訊與未知資訊改為動
+- 平時不顯示
+- 心理資料包含
+- 思想資料包含
+- 態維護
+- 或任何正式
+- 戰後善後
+- 戰爭觀
+- 所有人格
+- 扮演提示
+- 提案彙整
+- 改為即時同步以下區塊
+- 改為墨羽具備休息
+- 改為平台回覆拆分
+- 改變天下
+- 改變的是
+- 救更多人
+- 敘事規則
+- 文件資訊
+- 新增世界時間固定顯示格式
+- 新增世界演算
+- 新增互動規格
+- 新增人物弧線
+- 新增作品核心
+- 新增墨羽札記完整保存規則
+- 新增歷史札記自動調閱機制
+- 新增每次遊戲回覆固定結構
+- 新增沉浸式互動小說規格
+- 新增煙火氣
+- 新增章末固定資訊排序
+- 新增章節規格
+- 新增第一世
+- 新增第一人稱沉浸式敘事規
+- 新增管理者模式完整調閱能
+- 新增遊戲模式切換規則
+- 新增隱藏互動選項
+- 時即可建立
+- 更能改善百姓生活
+- 書寫或整理思緒等合理條件
+- 最大遺憾
+- 最大願望
+- 最後判斷
+- 最終答案為
+- 最高精神
+- 朝廷觀
+- 未來事件或隱藏情報
+- 未提及內容皆維持原設定
+- 本作品不採用以下表述作為
+- 本作品最高精神為
+- 本作品核心為
+- 本更新檔承接
+- 本次更新正式採納
+- 本章由
+
+---
+
+# 五、Story Bible 可能未反映於 Patch Notes 的詞項
+
+> Patch Notes 不必完整收錄 Story Bible；此區僅供檢查是否有版本更新應補記。
+
+- A Journal Records a Life
+- A.1
+- A.10 Official Glossary
+- A.2
+- A.3
+- A.4 Core Terminology
+- A.5
+- A.6
+- A.7
+- A.8
+- A.9 AI Terminology Rules
+- AI Ability Rules
+- AI Age Rules
+- AI Assists. Humans Decide.
+- AI Behavior Rules
+- AI Birth Rules
+- AI Canon
+- AI Canon Governance
+- AI Canon Governance Principles
+- AI Canon Rules
+- AI Cause
+- AI Character Creation Rules
+- AI Character File Rules
+- AI Character Principles
+- AI Character Rules
+- AI Collaboration
+- AI Collaboration Guide
+- AI Death Rules
+- AI Disease Rules
+- AI Draft
+- AI Economy Rules
+- AI Emotion Rules
+- AI Event Rules
+- AI Execution Principles
+- AI Execution Rules
+- AI Exploration Rules
+- AI Faction Rules
+- AI Gameplay Rules
+- AI Governance Philosophy
+- AI Governance Rules
+- AI Growth Rules
+- AI Guidelines
+- AI Health Rules
+- AI Hierarchy Rules
+- AI History Rules
+- AI Information Rules
+- AI Injury Rules
+- AI Integrity Rules
+- AI Interaction Rules
+- AI Journal Rules
+- AI Life Principles
+- AI Life Rules
+- AI Lifecycle Rules
+- AI Limitations
+- AI Maintains the Canon
+- AI Marriage
+- AI Mode Rules
+- AI Narrative Rules
+- AI Nation
+- AI Nature Rules
+- AI Official Canon Rules
+- AI Permissions
+- AI Persistence Rules
+- AI Personality Rules
+- AI Philosophy
+- AI Presentation Rules
+- AI Proposal
+- AI Regional Rules
+- AI Relationship Rules
+- AI Repository Cooperation
+- AI Repository Rules
+- AI Reproduction Rules
+- AI Responsibility
+- AI Roles
+- AI Runtime
+- AI Runtime Rules
+- AI Serves Canon
+- AI Serves the World
+- AI Society Rules
+- AI Space Rules
+- AI Synchronization Rules
+- AI Time Rules
+- AI Validation
+- AI Version Rules
+- AI World Event Rules
+- AI World Principles
+- AI World Rules
+- AI and Version Governance
+- Abilities
+- Ability Acquisition
+- Ability Categories
+- Ability Consistency
+- Ability Development
+- Ability Growth
+- Ability Inheritance
+- Ability Integrity Principle
+- Ability Is Earned
+- Ability Limitations
+- Ability Philosophy
+- Ability Principles
+- Ability Synchronization
+- Active Events
+- Active Factions
+- Active Nations
+- Acute Disease
+- Administrator Access
+- Administrator Mode
+- Adolescence
+- Adulthood
+- Aftereffects
+- Age
+- Age Effects
+- Age Growth
+- Age Philosophy
+- Age Principles
+- Age Runtime
+- Age Synchronization
+- Age System
+- Aging
+- Aging System
+- Alive
+- Anger
+- App
+- Appearance
+- Appendices
+- Appendix A
+- Appendix B
+- Appendix C
+- Appendix D
+- Appendix E
+- Appendix F
+- Appendix G
+- Appendix H
+- Appendix I
+- Appendix J
+- Archive
+- Archive Management
+- Archived
+- Archives/
+- Autonomous Actions
+- Autonomous Characters
+- Autonomous World
+- B.1
+- B.10 Database Synchronization
+- B.11 AI Database Rules
+- B.12 Official Database
+- B.2
+- B.3 Official Database
+- B.4 Story Bible
+- B.5 Character Database
+- B.6 World Database
+- B.7 Runtime Database
+- B.8 Database Relationships
+- B.9 Database Governance
+- BREAKING CHANGE
+- Background
+- Backward Compatibility
+- Backward Compatible
+- Basic Information
+- Behavior
+- Behavior Components
+- Behavior Consistency
+- Behavior Philosophy
+- Behavior Principles
+- Behavior Reflects Character.
+- Birth
+- Birth Background
+- Birth Begins Life
+- Birth Information
+- Birth Philosophy
+- Birth Principles
+- Birth Runtime
+- Birth Synchronization
+- Birth System
+- Birthplace
+- Bloodline
+- Bloodline Establishment
+- Bloodline Inheritance
+- Bloodline Principles
+- Bloodline System
+- Body
+- Bold
+- Bold__
+- Breaking Change
+- Breaking Changes
+- Bug
+- C.1
+- C.10 File Naming
+- C.11 AI Version Rules
+- C.12 Versioning Checklist
+- C.2 Versioning Philosophy
+- C.3 Version Format
+- C.4 Major Version
+- C.5 Minor Version
+- C.6 Patch Version
+- C.7 Release Naming
+- C.8 Version Tag
+- C.9 Compatibility
+- Canon Analyst
+- Canon Authority
+
+---
+
+# 六、判定原則
+
+1. Story Bible 為最高 Official Canon。
+2. Patch Notes 僅作為版本變更紀錄。
+3. 若 Patch Notes 與 Story Bible 發生衝突，依 Story Bible 為準。
+4. 本報告為自動輔助檢查，不自動修改任何正式文件。
+
+# End of Report
