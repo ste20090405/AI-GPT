@@ -1,92 +1,79 @@
 # 天下風雲錄 Official Repository
 
-本 Repository 為《天下風雲錄》Story Bible、Runtime、Official Databases、Gameplay、Patch Notes、Archives 與 Project Documentation 的正式保存中心。
+> Official Canon Repository for **天下風雲錄 v3.1.0**
 
 ---
 
-## Repository Standard
+# Repository Purpose
 
-本 Repository 以 **Story Bible v3.0.3 Appendix E Repository Guidelines** 為正式目錄標準。
+本 Repository 為《天下風雲錄》唯一正式 Canon Repository。
 
-Repository 的責任不是創造 Canon，而是保存、管理與維護 Official Canon。
+主要負責保存與維護：
+
+- Story Bible
+- Runtime
+- Official Databases
+- Gameplay
+- Official Patch Notes
+- Project Rules
+- Documentation
+- Templates
+- Development Tools
+- Archives
+
+Repository 不負責創造 Canon。
+
+所有 Canon 皆源自 Story Bible。
 
 ---
 
-## 目錄架構
+# Repository Structure
 
 ```text
-AI-GPT/
-├── 00_Index/
-├── 01_StoryBible/
-├── 02_Runtime/
-├── 03_Databases/
-│   ├── Characters/
-│   ├── World/
-│   ├── Maps/
-│   ├── Timeline/
-│   ├── MartialArts/
-│   ├── Court/
-│   └── Glossary/
-├── 04_Gameplay/
-├── 05_PatchNotes/
-├── 06_Archives/
-├── 07_Documents/
-│   ├── Templates/
-│   ├── SOP/
-│   ├── Git/
-│   ├── AI/
-│   └── Standards/
-├── README.md
-├── CHANGELOG.md
-└── LICENSE
+天下風雲錄V3.1.0/
+
+00_Index/
+01_StoryBible/
+02_Runtime/
+02_OfficialPatchNotes/
+03_Databases/
+04_Gameplay/
+06_Archives/
+06_ProjectRules/
+07_Documents/
+07_Staging/
+07_Templates/
+08_Tools/
+09_Archive/
 ```
 
 ---
 
-## 目錄職責
+# Canon Hierarchy
 
-| 目錄 | 職責 |
-|------|------|
-| `00_Index/` | 索引與導航 |
-| `01_StoryBible/` | Story Bible 與最高 Canon |
-| `02_Runtime/` | Runtime 狀態與 Schema |
-| `03_Databases/` | Official Databases |
-| `04_Gameplay/` | Gameplay 規則、模式與呈現規範 |
-| `05_PatchNotes/` | Official Patch Notes 與 Release Notes |
-| `06_Archives/` | Deprecated、Old Versions、Drafts 與 References |
-| `07_Documents/` | Project Documentation、Templates、SOP、Git、AI 與 Standards |
+Story Bible → Runtime → Official Databases → Gameplay → Official Patch Notes → Archives
+
+Story Bible 永遠具有最高 Canon。
 
 ---
 
-## Canon 優先原則
+# Repository Principles
 
-1. Story Bible 永遠為最高依據。
-2. Official Databases 實作 Story Bible。
-3. Runtime 保存正式世界狀態。
-4. Gameplay 呈現 Runtime。
-5. Patch Notes 記錄正式版本更新。
-6. Archives 僅供歷史追溯，不作為最新 Canon。
+所有正式文件必須：
 
----
-
-## 維護原則
-
-所有正式資料必須：
-
-- 可追溯。
-- 可交叉引用。
-- 不與 Story Bible 衝突。
-- 使用 zh-TW Markdown。
-- 遵循 Appendix E Repository Guidelines。
-- 遵循 Appendix F Markdown Style Guide。
-- 遵循 Appendix H Git Commit Convention。
+- Traceable
+- Cross Referenced
+- Canon Consistent
+- UTF-8 Encoding
+- zh-TW Markdown
 
 ---
 
-## Current Official Version
+# Version
 
-```text
-Story Bible : v3.0.3
-Repository  : Appendix E Standard
-Status      : Restructuring for v3.1.0
-```
+| Item | Version |
+|------|---------|
+| Story Bible | v3.1.0 |
+| Repository | v3.1.0 |
+| Runtime | v3.1.0 |
+| Status | Stable |
