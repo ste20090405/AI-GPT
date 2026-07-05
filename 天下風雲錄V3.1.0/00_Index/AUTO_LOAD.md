@@ -241,7 +241,7 @@ Draft / Experimental / Testing Only
 5. 若提案影響廣泛規則、互動格式、UI 或版本設計，必須同步更新 `天下風雲錄 提案彙整.md`。
 6. Accepted Proposal 只代表建議採用，不代表 Canon。
 7. Accepted Proposal 必須先形成 Patch Notes Candidate Text。
-8. 只有正式寫入 `02_OfficialPatchNotes/天下風雲錄PatchNotes_vX.X.X.md` 後，才可成為正式 Canon 或 Gameplay Rule。
+8. 只有正式寫入 `02_OfficialPatchNotes/PatchNotes_vX.X.X.md` 後，才可成為正式 Canon 或 Gameplay Rule。
 9. Staging 內容不得覆寫 Story Bible、Official Patch Notes、Runtime Save 或 Archive。
 ```
 
