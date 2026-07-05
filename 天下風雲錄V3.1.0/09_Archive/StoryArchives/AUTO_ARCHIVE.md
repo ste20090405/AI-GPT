@@ -95,9 +95,9 @@ Save_003 → StoryArchives/SAVE_03/
 ### 完整路徑範例
 
 ```text
-09_Archive/StoryArchives/SAVE_01/第001卷/第一章.md
-09_Archive/StoryArchives/SAVE_01/第001卷/第二章.md
-09_Archive/StoryArchives/SAVE_01/第001卷/第七章（新的早晨・上）.md
+09_Archive/StoryArchives/SAVE_01/第一卷/第一章.md
+09_Archive/StoryArchives/SAVE_01/第一卷/第二章.md
+09_Archive/StoryArchives/SAVE_01/第一卷/第七章（新的早晨・上）.md
 ```
 
 若目前劇情仍屬同一卷，持續寫入同一卷資料夾。
@@ -111,10 +111,12 @@ Save_003 → StoryArchives/SAVE_03/
 自動收錄時，來源優先順序如下：
 
 ```text
-1. FullStory / 已保存完整正文檔案（若存在）
-2. StoryLog + Journal + Timeline 重建封存敘事
-3. 當前對話中已完整輸出的章節正文
-4. 手動提供的章節正文
+
+1. 當前對話中已完整輸出的章節正文
+2. 手動提供的章節正文
+3. FullStory / 已保存完整正文檔案（若存在）
+4. StoryLog + Journal + Timeline 重建封存敘事
+
 ```
 
 注意：
@@ -226,7 +228,7 @@ AUTO_ARCHIVE_END
 預設：
 
 ```text
-第001卷
+第一卷
 ```
 
 只有在以下條件成立時建立新卷：
