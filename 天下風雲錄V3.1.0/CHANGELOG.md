@@ -14,6 +14,37 @@
 
 ---
 
+## v3.1.0
+
+### Added
+
+- Repository 重構完成。
+- 新增 `00_Index/` Boot System。
+- 新增 `AUTO_LOAD.md`。
+- 新增 `AUTO_SAVE.md`。
+- 新增 Runtime Save System。
+- 新增 Official Patch Notes。
+- 新增 `07_Documents/SOP/`。
+- 新增 `SOP_INDEX.md`。
+- 新增 `快速開始.md`。
+- 新增 `玩家操作手冊.md`。
+- 新增 `AI操作手冊.md`。
+- 新增 `Repository維護手冊.md`。
+
+### Changed
+
+- README 新增 Quick Start。
+- README 新增 SOP 導覽。
+- README 更新 Boot Automation。
+- Repository Structure 更新。
+- Documentation 導覽更新。
+
+### Status
+
+Stable
+
+---
+
 ## v3.0.3
 
 ### Added
